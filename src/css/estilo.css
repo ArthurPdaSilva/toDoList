@@ -105,6 +105,8 @@ ul.menu{
     font-size: 1.2em;
     border-radius: .5em;
     background-color: #3454D1;
+    overflow-y: auto;
+    height: 30vh;
 }
 
 li{
