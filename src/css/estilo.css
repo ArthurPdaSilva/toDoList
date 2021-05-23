@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+/* All */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    justify-content: center;
+    min-height: 100vh;
+    font-size: normal;
+    font-family: 'Roboto', sans-serif;
+    background-color: #3454D1;
+}
+
+button#add, button#clearList{
+    background-color: #3454D1;
+    font-size: 1em;
+}
+
+body, li, div.container, div.addTasks, div.palette, ul.menu{
+    display: flex;
+    align-items: center;
+}
+
+/* Container */
+div.container{
+    flex-direction: column;
+    gap: 1em;
+    min-height: 75vh;
+    min-width: 25vw;
+    background-color: white;
+    padding: 1em;
+    box-shadow: .5em .5em 1em rgba(0, 0, 0, 0.5);
+    border-radius: 1em;
+}
+
+/* Input Container */
+div.addTasks{
+    justify-content: center;
+}
+
+div.addTasks, ul.menu{
+    width: 100%;
+    gap: .5em;
+}
+
+div.addTasks > input{
+    font-size: 1em;
+    background-color: #c3c3c3;
+}
+
+input, button, ul.menu{
+    border: none;
+    padding: 1em;
+    border-radius: .5em;
+    font-weight: bold;
+}
+
+button, div.paletteColor{
+    cursor: pointer;
+    color: white;
+}
+
+button#add{
+    text-align: center;
+    min-width: 5vw;
+}
+
+/* Palette */
+div.palette{
+    justify-content: center;
+    gap: 1em;
+    width: 100%;
+}
+
+/* Palette Colors */
+div.paletteColor{
+    cursor: pointer;
+    width: 3vw;
+    height: 7vh;
+    border-radius: 100%;
+}
+
+div.white{
+    background-color: #c3c3c3;
+}
+
+div.yellow{
+    background-color: #F0C808;
+}
+
+div.red{
+    background-color: #DD1C1A;
+}
+
+/* Menu Task */
+ul.menu{
+    flex-direction: column;
+    font-size: 1.2em;
+    border-radius: .5em;
+    background-color: #3454D1;
+}
+
+li{
+    justify-content: space-around;
+    list-style: none;
+    background-color: white;
+    color: black;
+    padding: .5em;
+    border-radius: .5em;
+    width: 100%;
+}
+
+span.clearButton{
+    cursor: pointer;
+    transition: transform .4s ease;
+}
+
+span.clearButton:hover{
+    transform: scale(1.2);
+}
+
+button#clearList{
+    width: 80%;
+}
