@@ -59,7 +59,7 @@ input, button, ul.menu{
     font-weight: bold;
 }
 
-button, div.paletteColor{
+button, label.paletteColor{
     cursor: pointer;
     color: white;
 }
@@ -77,23 +77,26 @@ div.palette{
 }
 
 /* Palette Colors */
-div.paletteColor{
-    cursor: pointer;
+label.paletteColor{
     width: 3vw;
     height: 7vh;
     border-radius: 100%;
 }
 
-div.white{
+label.white{
     background-color: #c3c3c3;
 }
 
-div.yellow{
+label.yellow{
     background-color: #F0C808;
 }
 
-div.red{
+label.red{
     background-color: #DD1C1A;
+}
+
+input[type='radio']{
+    visibility: hidden;
 }
 
 /* Menu Task */
@@ -128,7 +131,7 @@ button#clearList{
 }
 
 @media(max-width: 600px){
-    div.paletteColor{
+    label.paletteColor{
         width: 12vw; 
     }
 }

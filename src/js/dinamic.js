@@ -1,21 +1,18 @@
 // Variables
 const input = document.querySelector('#addText');
-const palettes = document.querySelectorAll('.paletteColor');
+const palettes = document.querySelectorAll('input[type="radio"]');
 const list = document.querySelector('.menu');
+
+console.log(palettes);
 
 // Events
 const addButton = document.querySelector('#add').addEventListener('click', () => {
     addList();
 });
-
 const removeAllList = document.querySelector('#clearList').addEventListener('click', () => list.innerHTML = '');
 
-palettes[0].addEventListener('click', () => changeDefault('#FFF', '#000'));
-palettes[1].addEventListener('click', () => changeDefault('#F0C808', '#FFF'));
-palettes[2].addEventListener('click', () => changeDefault('#DD1C1A', '#FFF'));
-
 // Change List Colors
-function changeDefault(backgroundColor, textColor){
+function changeDefault(backgroundColor, textColor, task){
     task.style.backgroundColor = backgroundColor;
     task.style.color = textColor;
 }
@@ -32,6 +29,15 @@ function addList(){
         text.textContent = input.value;
         buttonClear.textContent = 'CLEAR';
         buttonClear.classList.add('clearButton');
+
+        // Call the color function
+        if(palettes[0].checked){
+            changeDefault(palettes[0].value, '#000', task);
+        }else if(palettes[1].checked){
+            changeDefault(palettes[1].value, '#FFF', task);
+        }else{
+            changeDefault(palettes[2].value, '#FFF', task);
+        }
 
         // Remove task
         buttonClear.addEventListener('click', () => {
