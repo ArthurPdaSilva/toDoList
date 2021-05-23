@@ -126,3 +126,9 @@ span.clearButton:hover{
 button#clearList{
     width: 80%;
 }
+
+@media(max-width: 600px){
+    div.paletteColor{
+        width: 12vw; 
+    }
+}
