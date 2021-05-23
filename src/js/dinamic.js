@@ -23,7 +23,7 @@ function changeDefault(backgroundColor, textColor){
 // Add task to list
 function addList(){
     if(input.value.length <= 3){
-        return false;
+        alert('Please, enter more than three words')
     }else{
         const task = document.createElement('li');
         const buttonClear = document.createElement('span');
